@@ -1,0 +1,92 @@
+\documentclass[20pt]{article}
+
+\usepackage{lmodern}
+
+\usepackage[document]{ragged2e}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Compiler Chapter 1 Notes}
+\rhead{Daniel Lee}
+
+\rfoot{Page \thepage}
+\title{Chapter 1}
+\author{Daniel Lee}
+\date{May 7th,  2022}
+\begin{document}
+\maketitle
+\newpage
+\justify
+\section*{Introduction}
+	\begin{itemize}
+	\item Modern day programs often rely on software to convert low level abstractions to higher level virtual programns
+  	\item Compilers are programs that convert a program from one program to another to prepare it for execution
+    \item To do this we need a means of understanding the syntatical meaning of a language and have a scheme to map it from one language to another
+  	\item There is a front end to handle the target language and back end to deal with the source language
+    \item Using a blackbox scheme we can potentially view a compiler as this:\\
+	\textbf{source program $\rightarrow$ Compiler $\rightarrow$ target program}
+	\item Many people believe compilers only produce programs written in assembly, however it is possible for compilers to produce an output that is a high level language
+ 	\item Interpreters convert an instruction line by line
+    \item Compilers translate the entire program before executing
+    \item Some languages combine both compilers and Interpreters
+    \begin{itemize}
+		\item An example of this would be Java
+  		\item Java is compiled into byte code and then the bytecode is ran by an interpreter by the JVM 
+	\end{itemize}
+	\item A good compiler incorporates many different aspects of computer science to optimize performance
+	\end{itemize}
+\subsection*{Fundamental Principles:}
+	\begin{itemize}
+		\item Compilers are large, complex programs with many different ways to implement them
+ 		\item With this in mind, there are certain principles to adhere to for when designing a compiler:
+		\begin{itemize}
+			\item Compilers must preserve the original meaning of the program being compiled 
+   			\item Compilers must improve input program in a discernible way
+		\end{itemize}
+	\end{itemize}
+\newpage
+\section*{Compiler Structures}
+	\begin{itemize}
+		\item{A compiler must understand the source program it takes in as an input and maps its functionality to a target machine}
+  		\item{Compiliation thus can be broken down into two subprocesses: frontend and backend}
+   	    \item{Frontend focuses on understanding the source language, it maps the source language into the IR or immediate representation to be used by the machine}
+        \item{Backend focues on mapping the intermediate representation into the instruction set of the program}
+    	\item A two phase structure allows for simple restructuring of programs:
+     	\begin{itemize} 
+			\item We can develop multiple backends for a single front end to have a source language run on multiple machines
+   			\item Alternatively we can develop multiple front ends for multiple back ends, allowing us to run multiple languages on a single machine using a common immediate representation
+    		\item A front-end produces an IR, which we can further optimized by a mechanism called the optimizer
+      		\item An optimizer can make multiple passes on the IR and rewrite the IR to produce a faster program
+        	\item Source program$\rightarrow$ Front-end $\rightarrow_{IR}$ Optimizer $\rightarrow_{IR}$ Backend $\rightarrow$ Target Program  
+			\item 
+		\end{itemize}
+    \end{itemize}
+\section*{Translation}
+	\begin{itemize}
+		\item Translation is all about converting abstractions into more concrete processes 
+	\end{itemize}
+	\subsection*{The Front End}
+		\begin{itemize}
+			\item Scans program to see if syntax is valid and reports to User Otherwise
+			\item From a mathematical standpoint a source language can be viewed as a set of Strings defined by a rule called \textbf{Grammar}
+  			\item A scanner and a parser determine if a program follows grammar
+			\item Programming languages often refers to words based on parts of speech, using rules based off of parts of speechs we can have multiple rules define multiple programming language
+   			\item Sentence $\rightarrow$ Subject verb Object endmark
+      		\item A scanner takes a stream of characters and converts it to stream of classified words, this can be viewed as a pair (p,s)
+			\\Example: \textbf{(noun, Compilers)}
+			\item In practice, the spelling of the words may be stored in a hash table and represented in pairs with an integer index to simplify equality tests
+   			\item Once a stream is converted into classified word, we can parse to find derivations for a Sentence
+      		\item With every step, we can rewrite a term in the Sentence
+		\end{itemize}
+\section*{Intermediate Representation}
+\begin{itemize} 
+	\item Immediate representations can exist in many forms, some compilers represent program as assembly others represent it as a graph
+ 	\item The optimizer examines the IR code and rewrites to optimize it
+\end{itemize}
+\section*{The Back End}
+\begin{itemize}
+	\item The back end of a compiler determines how resources are gonna be allocated to execute a programn
+	\item From the values that reside in memory to the ones stored in the register, the back-end responsible for optimizing the IR and using the machine instruction set to execute an instruction
+\end{itemize}
+
+\end{document}
