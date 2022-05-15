@@ -1,0 +1,109 @@
+\documentclass[20pt]{article}
+
+\usepackage{lmodern}
+
+\usepackage[document]{ragged2e}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Compiler Chapter 2 Notes}
+\rhead{Daniel Lee}
+
+\rfoot{Page \thepage}
+\title{Chapter 2}
+\author{Daniel Lee}
+\date{May 7th,  2022}
+\begin{document}
+\maketitle
+\newpage
+\justify
+\section*{Introduction}
+    \begin{itemize}
+        \item A compiler scans an input of characters and outputs a stream of words labelled by syntatic category
+        \item A microsyntax is used to group words that have meaning within the source language  
+        \item Some words such as keywords have special meaning, which makes them reserved 
+        \item An example of this would be the \textit{while} and \textit{static} keywords in the Java programming language
+        \item To recognize keywords, the scanner can either use dictionary lookup or encode keywords directly into microsyntax
+        \item The simple lexical structure of programming languages lends itself to efficent scanners
+    \end{itemize}
+\section*{Recognizing Words}
+    \begin{itemize}
+        \item When we are parsing words we can view the parsing process as a series of if-else statements or a state machine 
+        \item Transition diagrams often provide a simple means of formalizing the abstractions a compiler may need to implement them
+        \item S is the finite set of states in the recognizer, alongside with error state $s_e$
+        \item $\Sigma$ is the finite alphabet recognized by the recognizer 
+        \item $\delta(s,c)$ is the transition function, it maps the value of state s and c,into some state
+        \item In state $s_i$ with transition character $c$, the state makes the following transition $s_i \rightarrow_c \delta(s_i,c)$
+        \item $s_0 \in S$ refers to initial state
+        \item $S_a (S_a \subseteq S)$, is the set of accepting states
+    \end{itemize}
+    \subsubsection*{Example:}
+    $S = \{s_0, s_1, s_2, s_3, .......,s_10,s_e\}\\
+    \Sigma = \{ e, h, i, l, n, o, t, w\} \\
+    \delta = \\
+        \begin{cases}
+        s_0 \rightarrow_n s_1, s_0 \rightarrow_w s_6, s_1 \rightarrow_e s_2, s_1 \rightarrow_o s_4, s_2 \rightarrow_w s_3 
+        \\s_4 \rightarrow_t s_5, s_6 \rightarrow_h s_7, s_7 \rightarrow_i s_8, s_8 \rightarrow_l s_9, s_9 \rightarrow_e s_{10} 
+        \end{cases}\\
+        s_0 = s_0\\
+        S_A = \{s_3,s_5,s_{10}\}\\
+    $
+
+    \newpage
+\subsection*{More complex words:}
+        \begin{itemize}
+            \item For more complex words we can have the state machine accept multiple inputs
+            \item We can vastly simplify state machines by using cycles
+        \end{itemize}
+        \subsubsection*{Practice Problems:}
+            \begin{itemize}
+                \item Problem 1: A six-character identifier consisting of alphanumeric characters followed by zero to five-alpha numeric characters
+                    \begin{itemize}
+                        \item $S = \{s_0, s_1,s_e\}$ 
+                        \item $\Sigma = {a = \textbf{set of all-alphabet},b = \textbf{set of all alphanumeric}}$
+                        \item $s_0 = s_0$
+                        \item $\delta = \begin{cases}
+                            s_0 \rightarrow_a s_1, s_{1} \rightarrow_b s_{1}
+                        \end{cases}$
+                        \item $S_A = {s_1}$
+                    \end{itemize}
+                \item Problem 2: 
+                    \begin{itemize}
+                        \item $S = \{s_0, s_1,s_2 s_e\}$
+                        \item $\Sigma  = {(,)}$
+                        \item $s_0 = s_0$
+                        \item $S_A = \{s_2\}$
+                        \item $\delta = \begin{cases}
+                            s_0\rightarrow_{(} s_1, s_1 \rightarrow_{)} s_2, s_2 \rightarrow_{(} s_1 \} 
+                        \end{cases}$
+                    \end{itemize}
+                \item Problem 3: A Pascal comment which consists of \{, zero  or more characters from the alphabet, and closed by \}:
+                  \begin{itemize}
+                    \item $S = \{s_0, s_1,s_2\}$
+                    \item $\Sigma = \{ \},\{,a...z,A...Z,0...9\}$
+                    \item $s_0 = s_0 $
+                    \item $S_A = \{S_3 \}$
+                    \item $\delta = \begin{cases}
+                        s_0 \rightarrow_{\{} s_1\\
+                        s_1 \rightarrow_{(a...z,A...Z,0...9)} s_1\\
+                        s_1 \rightarrow_\{ s_2
+                    \end{cases}$
+                  \end{itemize}
+                  \end{itemize}
+    \subsection*{Regular Expression}
+                  \begin{itemize} 
+                    \item The set of all words accepted by a finite automaton, F, forms a language L(F)
+                    \item For any FA, we can describe describe the language using regular expression or RE
+                    \item The language consists of single world "new" can be described as RE, new 
+                    \newpage
+                    \item A language consisting of two words, new or while can be represented as RE new$|$while
+                    \item new or not can be represent by RE, n(ew$|$ot)
+                    \item Let us consider the example of punctuation marks, a REs for punctuation may appear such as: : ; ? = $>$ ( ) {} []
+                    \item Keywords may have an expression such as this: if while this integer instanceof
+                    \item more complex RE: 0 $|(0|1|2|3|4|5|6|7|8|9) (0|1|2|3|4|5|6|7|8|9)*$
+                    \item \textbf{The following operator is called a kleen operator and indicates there can be zero or more instances of a RE} 
+                \end{itemize}
+
+      
+
+\end{document}
