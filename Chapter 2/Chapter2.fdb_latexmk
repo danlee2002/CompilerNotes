@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1652645815 "/Users/daniellee/Documents/GitHub/Compiler/CompilerNotes/Chapter 2/Chapter2.tex" "Chapter2.pdf" "Chapter2" 1652645815
-  "/Users/daniellee/Documents/GitHub/Compiler/CompilerNotes/Chapter 2/Chapter2.tex" 1652645814 5664 708bd631a1a6d91987b5f952d44a013b ""
+["pdflatex"] 1652683694 "/Users/daniellee/Documents/GitHub/Compiler/CompilerNotes/Chapter 2/Chapter2.tex" "Chapter2.pdf" "Chapter2" 1652683694
+  "/Users/daniellee/Documents/GitHub/Compiler/CompilerNotes/Chapter 2/Chapter2.tex" 1652683694 9812 5f7633222c737ce4c0d705b0b0caa8cf ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1202520719 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -57,8 +57,8 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1650071110 2826445 dd1e70c1155dc80f937322c3ef4b714a ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Chapter2.aux" 1652645815 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
-  "Chapter2.tex" 1652645814 5664 708bd631a1a6d91987b5f952d44a013b ""
+  "Chapter2.aux" 1652683694 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
+  "Chapter2.tex" 1652683694 9812 5f7633222c737ce4c0d705b0b0caa8cf ""
   (generated)
   "Chapter2.aux"
   "Chapter2.log"

@@ -103,7 +103,67 @@
                     \item more complex RE: 0 $|(0|1|2|3|4|5|6|7|8|9) (0|1|2|3|4|5|6|7|8|9)*$
                     \item \textbf{The following operator is called a kleen operator and indicates there can be zero or more instances of a RE} 
                 \end{itemize}
+    \subsection*{Formalizing notes for regular expressions: }
+                \begin{itemize}
+                    \item Given a regular expression r, we can denote the Language it describes as L(r)
+                    \item An RE is made up of 3 operations:
+                    \item Alternation: The alternation or union of two sets R and S denoted R$|$S or \{$x|x \in R$ or $x \in S $\}  
+                    \item Concatenation: The concatentation of two sets RS contains all strings formed by prependong an element of R onto one from S,
+                    or \\\{xy$|x \in R \: and \: y \in S $\}
+                    \item Closure: The kleene closue of a set R, denoted by $R^*$ is $\cup_{i = 0}^{\inf} R^i$ is a concantenation of R with itself zero or more times
+                    \item Sometimes we can use notation for finite closure if a set is concantenated multiple times: \\
+                    $(R|RR|RRR)$
+                    \item Positive Closure is Denoted if $RR^*$
+                    \begin{itemize}
+                        \item If  $ a\in \Sigma$, then a is also an RE denoting set containing only a
+			\item If r and s are RES, denoting sets L(r) and L(s) then r $|$ s is a RE denoting the union, or alternation of L(r) and L(s)\\
+			Similarly rs is an RE denoting the concatenation of L(r) and L(s)\\
+			$r^*$ is an RE denoting Kleene closure of L(r)
+			\item $\epsilon$ represents a RE of an empty string
+			\item Parentheses have the highest precedence, followed by closure, concatenaton, and alternation
+                    \end{itemize}
+		    \subsection*{Example:}
+		    	\begin{itemize}
+				\item Imagine a language in keywords start with a letter in the English alphabet and can be then followed by a sequence of alphanumeric
+				character. We can represent the following keyword using RE: \\
+				([A...Z]$|[a...z])([A..Z]|([a...z])|([0...9])^*$
+				\item Let's consider another example one in which, we are representing unsigned integers:\\
+				$(0|([1...9])([0...9])^*$
+				\item Unsigned real number: \\
+					$(0|([1...9])([1...9])^*)(\epsilon| .[0...9]^*)$
+				\item Quoted strings using complement:\\
+					A quoted String in a programing language is often composed of a " followed by ", in between these two characters any characters\\
+					can appear. In theory we could write a regular expression that contains all the possible characters but this is impractical.
+					To circumvent this issue we can use the complement operator:\\
+					"$($\^{}"$)$"\\
+                \item Comments can often appear in many forms:\\
+                    $(//($ \^{}  $\backslash$n $)^*|$
+                    $/*($ \^{}* $|$\^{}  */$)^* */)$
+                 
+                     
+                \end{itemize}
+			
+                    \end{itemize}
+            \subsection*{Closure properties of RE:}
+                    \begin{itemize}
+                        \item Many regular expressions are closed under many operations,i.e if we apply an operation to a RE we get a RE
+                        \item Some obvious examples are concatenation, union, and closure
+                        \item Imagine we have a collection of regular expressions to describe syntatic categories in a language: $a_0, a_1,...,a_n$
+                        \item To describe all the valid words in a language we can use the RE: $a_0 | a_1 | a_2|...|a_n$
+                        \item Closure under union suggests that any finite language is a regular language and can be arranged in alternation
+                        \item Closure under concantentation also allows us to build complex REs from simpler one's by concatenating them 
+                        \item REs are closed under complements
+                    \end{itemize}
+            \subsection*{Practice Problems: }
+                    \begin{itemize}
+                        \item Chapter 2: pg 42
+                        \item Problem 1:
+                        \item $a_0 = [A...Z], a_1 = [a...z], a_2 = [0...9]$
+                        \subitem $(a_0|a_1)(a_0a_1a_2)^5$
+                        \item Problem 2:
+                        \item $a_0 = {}$
+                    \end{itemize}
 
-      
+
 
 \end{document}
