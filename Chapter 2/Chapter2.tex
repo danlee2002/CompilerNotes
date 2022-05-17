@@ -4,6 +4,8 @@
 
 \usepackage[document]{ragged2e}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
+\graphicspath{Images}
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Compiler Chapter 2 Notes}
@@ -161,9 +163,69 @@
                         \item $a_0 = [A...Z], a_1 = [a...z], a_2 = [0...9]$
                         \subitem $(a_0|a_1)(a_0a_1a_2)^5$
                         \item Problem 2:
-                        \item $a_0 = {}$
+                        \item $a_0 = $\^{} "$, a_1 = "$
+                        \subitem $a_1(a_0|a_1a_1)^*a_1$
                     \end{itemize}
+            \section*{From Regular Expression to Scanner:} 
+                    \begin{itemize}
+                        \item Up to this point we have covered a decent amount of notation, so what is the point of all this notation
+                        \item In this section we will be learning about deterministic FA(DFA) and nondeterministic FA(NFA) 
+                    \end{itemize}
+                    \subsection*{Nondeterministic Finite Automata}
+                
+                        \begin{itemize}
+                            \item Recall that an empty string $\epsilon$ is a RE, but many FAs did not include the empty string within the state diagrams
+                            \item So what role does $\epsilon$ play in  FA? 
+                            \item The answer lies in using $\epsilon$ to build more complex state machines
+                            \item For instance, we can use $\epsilon$ to represent concatentation of mn using $\epsilon$
+				                    \subitem $\rightarrow s_0 \rightarrow_m s_1 \rightarrow_{\epsilon} s_2 \rightarrow_{n} s_3$
+			                \item $\epsilon$ can often complicate how our model work
+                                  \begin{itemize}
+                                    \item Consider the following two FAs
+                                    \begin{figure}[h]
+                                    \includegraphics[width=\textwidth]{Images/uncombined.png}
+                                    \end{figure}
+                                    \newpage
+                                    \item Utilizing the $\epsilon$ transition we can add complexity to our model to form $a^*ab$
+                                    \begin{figure}[h]
+                                        \includegraphics[width=\textwidth]{Images/combined.png}
+                                        \end{figure} 
+                                    \item The following machine is called a NFA, due to the fact that for a specific character there can be transitions for same state depending on what character follows the input character 
+                                    \item A DFA on the contrary can only have a single transition for a single character for a state
+                            
+                                  \end{itemize}
+                        \subsubsection*{A Set of Models for NFA: }
+                                  \begin{itemize}
+                                      \item Each time a NFA makes a nondeterministic choice, it follows the transition  that transition that leads to accepting state of the input string
+                                      \item Each time the NFA makes non-deterministic choice, it replicares itself to pursue each possible translation
+                                      \item In this state, each possible translation is pursued and the current active state is called the \textit{configuration}
+                                  \end{itemize}
+                        \subsubsection*{Equivalence of  NFAs: }
+                                  \item NFAs and DFAs are equivalent in their expressive power
+                                  \item Any DFAs is a specical case of an NFA 
+                                  \item Conversely any NFA can be emulated by a DFA
+                                  \item Let us consider the state of a NFA when it has reached some point in input string
+                                  \item If there are n states and $|\Sigma|$ character then by rule of product there are $|\Sigma|^n$ configurations
+                                  \item To simulate the behavior of the NFA, we need a DFA for each configuration of NFA thus have more exponentially more states than NFA
+                                  \item This can make a DFA expensive from space standpoint	
+                                  \newpage	
+                                  \item Examine the two figures below:		
+                                  \begin{figure}[h]
+                                    \includegraphics[width=\textwidth]{Images/combined.png}
+                                    \includegraphics[width=\textwidth]{Images/nfaindfa.png}
+                                  \end{figure}    
+                                  \item Notice how both expressions are equivalent but instead of there of being two transition state for same characters
+                                  one simply moves on to the next state and have self-loop
+                        \end{itemize}
+            \subsection*{Regular Expression to NFA: Thompson's Construction}
+                        \begin{itemize}
+                            \item Thompson's construction can be used to build NFA from RE
+                            \item In a sense they are a template for building FAs and can be viewed as a combination of concatentation, alternation, and closure
+                            \item 
+                        \end{itemize}
+                        
+                     
 
-
+            
 
 \end{document}
