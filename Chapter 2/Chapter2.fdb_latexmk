@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1652764760 "/Users/daniellee/Documents/GitHub/Compiler/CompilerNotes/Chapter 2/Chapter2.tex" "Chapter2.pdf" "Chapter2" 1652764761
-  "/Users/daniellee/Documents/GitHub/Compiler/CompilerNotes/Chapter 2/Chapter2.tex" 1652764760 14931 9e147399dbcb4052f9fa0dc7c709e0b7 ""
+["pdflatex"] 1652906466 "/Users/daniellee/Documents/GitHub/Compiler/CompilerNotes/Chapter 2/Chapter2.tex" "Chapter2.pdf" "Chapter2" 1652906466
+  "/Users/daniellee/Documents/GitHub/Compiler/CompilerNotes/Chapter 2/Chapter2.tex" 1652906465 16551 22a1cccf8a29ddb02febc8d3f0d59839 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1202520719 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -66,10 +66,13 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1650071110 2826445 dd1e70c1155dc80f937322c3ef4b714a ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Chapter2.aux" 1652764761 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
-  "Chapter2.tex" 1652764760 14931 9e147399dbcb4052f9fa0dc7c709e0b7 ""
+  "Chapter2.aux" 1652906466 33 06c322e1d88c4778ac780ba5e7d05c77 "pdflatex"
+  "Chapter2.tex" 1652906465 16551 22a1cccf8a29ddb02febc8d3f0d59839 ""
   "Images/combined.png" 1652737631 26232 2932ecf014a438d40c348bf0df90c1dc ""
+  "Images/example.png" 1652767496 79141 83fa5f4a1395a929eebda2df97e33670 ""
   "Images/nfaindfa.png" 1652741725 26981 21d052ce1eebe6d1f0b129e0e396b452 ""
+  "Images/subsetconstruction.png" 1652906117 75337 2c1c9de82682a02aceae77e6195e82fd ""
+  "Images/thompson.png" 1652764702 128550 c86dfb02823b57e7289241e6b0821698 ""
   "Images/uncombined.png" 1652736954 29553 dbe9633b659e2e50712b17b1eb467687 ""
   (generated)
   "Chapter2.aux"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.15)  17 MAY 2022 01:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.15)  18 MAY 2022 16:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -238,20 +238,42 @@ File: Images/nfaindfa.png Graphic file (type png)
 <use Images/nfaindfa.png>
 Package pdftex.def Info: Images/nfaindfa.png  used on input line 215.
 (pdftex.def)             Requested size: 345.0pt x 76.7353pt.
- [8 <./Images/nfaindfa.png>] (./Chapter2.aux) ) 
+<Images/thompson.png, id=43, 557.08125pt x 393.47pt>
+File: Images/thompson.png Graphic file (type png)
+<use Images/thompson.png>
+Package pdftex.def Info: Images/thompson.png  used on input line 225.
+(pdftex.def)             Requested size: 345.0pt x 243.6787pt.
+ [8 <./Images/nfaindfa.png> <./Images/thompson.png>]
+<Images/example.png, id=49, 674.52pt x 218.8175pt>
+File: Images/example.png Graphic file (type png)
+<use Images/example.png>
+Package pdftex.def Info: Images/example.png  used on input line 230.
+(pdftex.def)             Requested size: 345.0pt x 111.92265pt.
+ [9 <./Images/example.png>]
+<Images/subsetconstruction.png, id=56, 609.27625pt x 344.28625pt>
+File: Images/subsetconstruction.png Graphic file (type png)
+<use Images/subsetconstruction.png>
+Package pdftex.def Info: Images/subsetconstruction.png  used on input line 243.
+(pdftex.def)             Requested size: 345.0pt x 194.95811pt.
+
+Overfull \hbox (30.20827pt too wide) in paragraph at lines 241--245
+[]\OT1/lmr/m/n/10 The sub-set takes a NFA,($\OML/lmm/m/it/10 N; \OT1/lmr/m/n/10 ^^F\OML/lmm/m/it/10 ; ^^N[]; n[]; N[]$\OT1/lmr/m/n/10 ) and pro-duces a DFA, ($\OML/lmm/m/it/10 D; \OT1/lmr/m/n/10 ^^F\OML/lmm/m/it/10 ; ^^N[]; d[]; D[]$
+ []
+
+[10 <./Images/subsetconstruction.png>] (./Chapter2.aux) ) 
 Here is how much of TeX's memory you used:
- 1875 strings out of 478268
- 32555 string characters out of 5846347
- 326171 words of memory out of 5000000
- 20069 multiletter control sequences out of 15000+600000
+ 1896 strings out of 478268
+ 33089 string characters out of 5846347
+ 326173 words of memory out of 5000000
+ 20087 multiletter control sequences out of 15000+600000
  510402 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,62p,337b,368s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on Chapter2.pdf (8 pages, 268654 bytes).
+Output written on Chapter2.pdf (10 pages, 453062 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

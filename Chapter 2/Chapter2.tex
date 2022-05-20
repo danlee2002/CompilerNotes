@@ -221,11 +221,26 @@
                         \begin{itemize}
                             \item Thompson's construction can be used to build NFA from RE
                             \item In a sense they are a template for building FAs and can be viewed as a combination of concatentation, alternation, and closure
-                            \item 
+                            \begin{figure}[h]
+                                \includegraphics[width=\textwidth]{Images/thompson.png}
+                            \end{figure}
+                            \item The following FAs above are trivial RE that can be used to build much more complex state machines
+                            \item The presence of one starting/accepting state makes the process of building a NFA much simpler 
+                            \begin{figure}[h]
+                                \includegraphics*[width=\textwidth]{Images/example.png}
+                            \end{figure}
+                            \item The following figure above represents a Thompson construction of $a(b|c)^*$
                         \end{itemize}
-                        
-                     
-
-            
-
+            \subsection*{NFA TO DFA: The Subset Construction}
+                        \begin{itemize}
+                            \item Thompson Construction produces an NFA to recognize the language specificatons of a RE
+                            \item DFA execution is a lot simpler than NFA so having an algorithm to conver a Thompson construction to a DFA is useful
+                            \item The resulting DFA are simpler and have several efficent implementations
+                            \newpage
+                            \item Below there shall be the algorithn for DFA construction using a NFA
+                            \item The subset takes a NFA,($N, \Sigma, \delta_{N}, n_{0}, N_{A}$) and produces a DFA, ($D,\Sigma,\delta_{D}, d_{0}, D_{A} $
+                            \begin{figure}[h]
+                                \includegraphics[width= \textwidth]{Images/subsetconstruction.png}
+                            \end{figure}
+                        \end{itemize}
 \end{document}
